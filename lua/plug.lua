@@ -93,5 +93,24 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-vsnip'                             
   use 'hrsh7th/cmp-path'                              
   use 'hrsh7th/cmp-buffer'                            
-  use 'hrsh7th/vim-vsnip'   
+  use 'hrsh7th/vim-vsnip'  
+
+  -- vimspector
+  use 'puremourning/vimspector'
+
+  -- float terminal
+  use 'voldikss/vim-floaterm'
+
+  -- nvim-telecope
+  use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.8',
+  	requires = { {'nvim-lua/plenary.nvim'} }
+	}
+	
+  use { 
+	  'nvim-telescope/telescope-fzf-native.nvim',
+	  run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' 
+  }
+
+
 end)
