@@ -12,6 +12,7 @@ require('opts')      -- Options
 require('keys')      -- Keymaps
 require('plug')      -- Plugins
 
+vim.wo.number = true
 -- Mason Setup
 require("mason").setup({
     ui = {
@@ -204,3 +205,7 @@ vim.opt.termguicolors = true
 
 -- empty setup using defaults
 require("nvim-tree").setup()
+
+
+-- Yanks and relatives
+vim.highlight.on_yank()
