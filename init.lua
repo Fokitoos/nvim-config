@@ -7,7 +7,7 @@ vim.g.mapleader = "\\"
 vim.g.localleader = "\\"	
 
 -- IMPORTS
-require('vars')         -- Variables
+require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
 require('plug')      -- Plugins
@@ -206,6 +206,8 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 require("nvim-tree").setup()
 
-
 -- Yanks and relatives
 vim.highlight.on_yank()
+
+-- Set default colorscheme
+vim.cmd("colorscheme dracula")

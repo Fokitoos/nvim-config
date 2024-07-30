@@ -34,6 +34,10 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
     noremap = true
   })
 
--- Open a terminal in the current cell
+-- Terminals
+--
+-- open terminal in current cell
 vim.keymap.set('n', '<leader>tt', ':e term://bash<CR>')
 
+-- escape terminal mode to normal mode
+vim.keymap.set('t', '<ESC>','<C-\\><C-n>')
